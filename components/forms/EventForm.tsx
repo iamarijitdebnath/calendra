@@ -39,15 +39,14 @@ export default function EventForm({
         resolver: zodResolver(eventFormSchema),
         defaultValues: event
             ? {
-              
                 ...event,
+                durationInMinutes: Number(event.durationInMinutes),
             }
             : {
-             
-                isActive: true,         
-                durationInMinutes: 30,   
-                description: '',         
-                name: '',                   
+                isActive: true,
+                durationInMinutes: 30,
+                description: '',
+                name: '',
             },
 
     })
